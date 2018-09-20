@@ -1,16 +1,16 @@
-"These are pulled from https://dougblack.io/words/a-good-vimrc.html
+"Most of these are pulled from https://dougblack.io/words/a-good-vimrc.html
+
+syntax enable " enable syntax processing
 
 "colors for vim found in /usr/share/vim/vim<version>/colors
 "blue, darkblue, default, delek, desert, elflord,
 "evening, industry, koehler, morning, murphy, pablo,
 "peachpuff, ron, shine, slate, torte, zellner, ...solarized
-"https://vimawesome.com/plugin/solarized-8
-"git clone https://github.com/lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
-"set background=dark
-"colorscheme solarized8
-colorscheme peachpuff
+"solarized https://github.com/altercation/vim-colors-solarized
+set background=dark
+let g:solarized_termcolors=256 "toggle this if colors look weird
+colorscheme solarized
 
-"syntax enable " enable syntax processing
 
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
@@ -29,4 +29,4 @@ nnoremap j gj
 nnoremap k gk
 
 inoremap jj <esc>
-inoremap ; :
+nnoremap ; :
