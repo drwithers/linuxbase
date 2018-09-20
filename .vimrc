@@ -11,18 +11,17 @@ set background=dark
 let g:solarized_termcolors=256 "toggle this if colors look weird
 colorscheme solarized
 
-
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
 
 set number " show line numbers
 
-"set showcmd " show command in bottom bar
+set showcmd " show command in bottom bar
 
-"set cursor line " highlight current line
+set cursorline " highlight current line
 
-"set showmatch " highlight matching [{()}]
+set showmatch " highlight matching [{()}]
 
 "move vertically by visual line
 nnoremap j gj
