@@ -14,6 +14,27 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
+# ROS aliases
+alias source_ros='source /opt/ros/galactic/local_setup.bash && source ~/apps/logging/local_setup.bash && source ~/apps/image_common/local_setup.bash && source ~/apps/asi_interfaces/local_setup.bash'
+source_ros
+
+# VAI aliases
+alias svai='source ./vai/local_setup.bash'
+alias bag='ros2 bag'
+alias bagrecord='ros2 bag record --storage mcap -a -o rosRecord'
+alias baginfo='ros2 bag info --storage mcap rosRecord'
+alias bagplay='ros2 bag play --storage mcap'
+#alias bagrate='ros2 service call /rosbag2_player/set_rate rosbag2_interfaces/srv/SetRate'
+alias pbag='ros2 service call /rosbag2_player/toggle_paused rosbag2_interfaces/srv/TogglePaused'
+
+# VAI shell functions
+ysplay() {
+  ros2 bag play --storage mcap "$@" --topics /ouster_left/points /ouster_right/points /tf /tf_static /twist /robot_model /joint_states
+}
+fmplay() {
+  ros2 bag play --storage mcap "$@" --topics  /front_lidar/points /tf /tf_static /twist /robot_model /joint_states
+}
+
 # some more ls aliases
 # alias ll='ls -halF'
 alias ll='ls -hlF'
@@ -41,7 +62,7 @@ alias open='xdg-open'
 alias copySshKey='ssh-copy-id -i /home/dwithers/.ssh/id_ed25519.pub'
 
 # tmux Aliases
-#alias tmux="tmux -2"
+alias tmux="tmux -2"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

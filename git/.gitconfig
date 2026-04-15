@@ -1,0 +1,7 @@
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[user]
+	email = 0726@asirobots.com
+	name = Derek Withers
+[core]
+	editor = vim

@@ -98,8 +98,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias source_ros='source /opt/ros/galactic/local_setup.bash && source ~/apps/logging/local_setup.bash && source ~/apps/image_common/local_setup.bash && source ~/apps/asi_interfaces/local_setup.bash'
-source_ros
-
 export LIBGL_ALWAYS_SOFTWARE=1
-#source ~/.secrets
+source ~/.secrets
